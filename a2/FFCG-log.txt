@@ -1,0 +1,124 @@
+
+Welcome to ItrDFS
+Initial State:
+
+ Agents on the left side: Farmer Fox Chicken Grain 
+ Agents on the right side: 
+ Boat is on the left. 
+
+len(OPEN)= 1; len(CLOSED)= 0; COUNT = 0
+OPEN is now: 
+ Agents on the left side: Fox Grain 
+ Agents on the right side: Farmer Chicken 
+ Boat is on the right. 
+
+len(OPEN)= 1; len(CLOSED)= 1; COUNT = 1
+OPEN is now: 
+ Agents on the left side: Farmer Fox Grain 
+ Agents on the right side: Chicken 
+ Boat is on the left. 
+
+len(OPEN)= 1; len(CLOSED)= 2; COUNT = 2
+OPEN is now: 
+ Agents on the left side: Grain 
+ Agents on the right side: Farmer Fox Chicken 
+ Boat is on the right. 
+, 
+ Agents on the left side: Fox 
+ Agents on the right side: Farmer Chicken Grain 
+ Boat is on the right. 
+
+len(OPEN)= 2; len(CLOSED)= 3; COUNT = 3
+OPEN is now: 
+ Agents on the left side: Farmer Chicken Grain 
+ Agents on the right side: Fox 
+ Boat is on the left. 
+, 
+ Agents on the left side: Fox 
+ Agents on the right side: Farmer Chicken Grain 
+ Boat is on the right. 
+
+len(OPEN)= 2; len(CLOSED)= 4; COUNT = 4
+OPEN is now: 
+ Agents on the left side: Chicken 
+ Agents on the right side: Farmer Fox Grain 
+ Boat is on the right. 
+, 
+ Agents on the left side: Fox 
+ Agents on the right side: Farmer Chicken Grain 
+ Boat is on the right. 
+
+len(OPEN)= 2; len(CLOSED)= 5; COUNT = 5
+OPEN is now: 
+ Agents on the left side: Farmer Chicken 
+ Agents on the right side: Fox Grain 
+ Boat is on the left. 
+, 
+ Agents on the left side: Farmer Fox Chicken 
+ Agents on the right side: Grain 
+ Boat is on the left. 
+, 
+ Agents on the left side: Fox 
+ Agents on the right side: Farmer Chicken Grain 
+ Boat is on the right. 
+
+len(OPEN)= 3; len(CLOSED)= 6; COUNT = 6
+OPEN is now: 
+ Agents on the left side: 
+ Agents on the right side: Farmer Fox Chicken Grain 
+ Boat is on the right. 
+, 
+ Agents on the left side: Farmer Fox Chicken 
+ Agents on the right side: Grain 
+ Boat is on the left. 
+, 
+ Agents on the left side: Fox 
+ Agents on the right side: Farmer Chicken Grain 
+ Boat is on the right. 
+
+len(OPEN)= 3; len(CLOSED)= 7; COUNT = 7
+Congratulations! you successfully guided the fox, chicken, and grain across the river!
+Solution path: 
+
+ Agents on the left side: Farmer Fox Chicken Grain 
+ Agents on the right side: 
+ Boat is on the left. 
+
+
+ Agents on the left side: Fox Grain 
+ Agents on the right side: Farmer Chicken 
+ Boat is on the right. 
+
+
+ Agents on the left side: Farmer Fox Grain 
+ Agents on the right side: Chicken 
+ Boat is on the left. 
+
+
+ Agents on the left side: Grain 
+ Agents on the right side: Farmer Fox Chicken 
+ Boat is on the right. 
+
+
+ Agents on the left side: Farmer Chicken Grain 
+ Agents on the right side: Fox 
+ Boat is on the left. 
+
+
+ Agents on the left side: Chicken 
+ Agents on the right side: Farmer Fox Grain 
+ Boat is on the right. 
+
+
+ Agents on the left side: Farmer Chicken 
+ Agents on the right side: Fox Grain 
+ Boat is on the left. 
+
+
+ Agents on the left side: 
+ Agents on the right side: Farmer Fox Chicken Grain 
+ Boat is on the right. 
+
+Length of solution path found: 7 edges
+Number of states expanded: 7
+Maximum length of the open list: 3

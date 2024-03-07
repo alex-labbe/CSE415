@@ -1,0 +1,3 @@
+Part 1 Step 4 (c)
+    # checks that if the given move leaves any humans, that the humans will not be outnumbered.
+    # if humans will be left on that side, if there will be more robots, return false.

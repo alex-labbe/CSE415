@@ -1,0 +1,22 @@
+        """
+        Evaluates the given state. States good for X should be larger that states good for O.
+        :param state: state to evaluate
+        :return: evaluation of the state
+        """
+        k = state.k
+        rows = [''.join(row) for row in state.board]
+        cols = [''.join(col) for col in list(zip(*state.board))]
+
+        diag_coords = [(i, i) for i in range(min(state.w, state.h))]
+        left_diag_coords = [[(c[0], c[1] + i) for c in diag_coords if c[1] + i < state.h] for i in range(1, state.h)]
+        right_diag_coords = [[(c[0] + i, c[1]) for c in diag_coords if c[0] + i < state.w] for i in range(1, state.w)]
+
+        diags = [''.join(state.board[c[0]][c[1]] for c in diag_coords)]
+        diags.extend([''.join(state.board[c[0]][state.h - 1 - c[1]] for c in diag_coords)])
+        diags.extend([''.join(state.board[c[0]][c[1]] for c in coords) for coords in left_diag_coords])
+        diags.extend([''.join(state.board[c[0]][state.h - 1 - c[1]] for c in coords) for coords in left_diag_coords])
+        diags.extend([''.join(state.board[c[0]][c[1]] for c in coords) for coords in right_diag_coords])
+        diags.extend([''.join(state.board[c[0]][state.h - 1 - c[1]] for c in coords) for coords in right_diag_coords])
+
+        rows.extend(cols)
+        rows.extend(diags)

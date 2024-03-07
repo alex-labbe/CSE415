@@ -1,0 +1,18 @@
+Name: Alexandre Labbe
+Student ID: 2377032
+Email: alabbe@uw.edu
+
+1. In the context of the Towers-of-Hanoi World MDP, explain how the Value Iteration algorithm uses the Bellman equations to iteratively compute the value table. (5 points)
+    The value iteration algorithm evaluates each state. For that state, it evaluates every possible action. And for every state-action pair it evaluates every next_state that can be landed on by that action (Hence the O(S^2*A) run time), it evaluates the probability of landing in that state and multiplies it by the reward of landing there.
+    The value iteration algorithm then sums all the possible rewards for each state-action pair and updates the value table with those values. As the algorithm iterates, the value of each node is updated, and nodes further away from the goal begin to be populated with values.
+
+2. How did you decide your custom epsilon function? What thoughts went into that and what would you change to further optimize your exploration? If your function was strong, explain why. (5 points)
+    I decided my custom epsilon function by writing a function that start at 0 and asymptotically aproach 1.
+    To further optimize exploration, I would try to increase the time it stays in the exploration stage based on the size of the state graph.
+    My function was strong because it spends the start of the exploration searching by the current policy. As a strong base is set with exploring by policy, it then starts exploring randomly.
+3. What is another exploration strategy other than epsilon-greedy that you believe would fit well with the Towers of Hanoi formulation? Why? (5 points)
+    An exploration strategy that would work well for towers of hanoi would be Softmax 
+        (I looked into other exploration strategies than the ones we looked at because the alternate "modified Q-update" would not work well for TOH because there are no negative rewards.)
+    Softmax would work well because it chooses actions probabilistically based on q-values and allows an epsilon-like value where you can iterativelly change the explarotion rate as the learning continues.
+    https://www.ai.rug.nl/~mwiering/GROUP/ARTICLES/Exploration_QLearning.pdf - where I looked at other exploration functions.
+
